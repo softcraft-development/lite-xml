@@ -1,5 +1,5 @@
 # Lite-XML
-A very lightweight XML construction library
+A very lightweight XML construction library.
 
 [![npm version](https://badge.fury.io/js/lite-xml.svg)](https://badge.fury.io/js/lite-xml)
 
@@ -25,6 +25,3 @@ See the [**API Documentation**](docs/README.md)
 ## License
 lite-xml is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
-
-# lite-xml
-A very lightweight XML construction library

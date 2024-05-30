@@ -1,0 +1,17 @@
+{
+  "entryPoints": [
+    "src"
+  ],
+  "exclude": [
+    "**/*.test.ts"
+  ],
+  "excludeExternals": true,
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "name": "Lite-XML",
+  "out": "./docs",
+  "plugin": [
+    "typedoc-plugin-markdown"
+  ],
+  "theme": "default"
+}

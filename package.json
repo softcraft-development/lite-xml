@@ -1,12 +1,35 @@
 {
-  "name": "lite-xml",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "author": "Craig Walker",
+  "description": "A very lightweight XML construction library.",
+  "devDependencies": {
+    "@stylistic/eslint-plugin": "^2.1.0",
+    "@types/jest": "^29.5.12",
+    "@typescript-eslint/eslint-plugin": "^7.9.0",
+    "@typescript-eslint/parser": "^7.9.0",
+    "esbuild": "^0.21.4",
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
+    "typedoc": "^0.25.13",
+    "typedoc-plugin-markdown": "^4.0.2",
+    "typescript": "^5.4.5"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+    "xml"
+  ],
+  "license": "MIT",
+  "name": "lite-xml",
+  "scripts": {
+    "check": "tsc --noEmit",
+    "declare": "tsc -p tsconfig.declare.json",
+    "build": "node esbuild.mjs",
+    "docs": "typedoc && rm docs/README.md",
+    "lint": "eslint 'src/**/*.ts'",
+    "test": "jest",
+    "validate": "pnpm run check && pnpm run lint && pnpm run test"
+  },
+  "type": "module",
+  "types": "index.d.ts",
+  "version": "0.1.0-dev.0"
 }

@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "esModuleInterop": true,
+    "lib": [
+      "es2015"
+    ],
+    "paths": {
+      "src/*": [
+        "./*"
+      ]
+    },
+    "strict": true
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "include": [
+    "src",
+    "test"
+  ]
+}
