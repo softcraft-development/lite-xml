@@ -29,6 +29,7 @@
     "build": "node esbuild.mjs",
     "docs": "typedoc && rm docs/README.md",
     "lint": "eslint 'src/**/*.ts'",
+    "lint:fix": "eslint --fix 'src/**/*.ts'",
     "test": "jest",
     "validate": "pnpm run check && pnpm run lint && pnpm run test"
   },
