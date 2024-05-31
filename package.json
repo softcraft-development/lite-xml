@@ -37,6 +37,6 @@
   "types": "index.d.ts",
   "version": "1.0.1-dev.0",
   "dependencies": {
-    "typonomy": "^0.3.0"
+    "typonomy": "^0.4.0"
   }
 }
