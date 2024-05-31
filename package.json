@@ -21,6 +21,7 @@
   ],
   "license": "MIT",
   "name": "lite-xml",
+  "main": "index.js",
   "scripts": {
     "check": "tsc --noEmit",
     "declare": "tsc -p tsconfig.declare.json",
