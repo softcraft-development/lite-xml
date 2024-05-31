@@ -35,7 +35,7 @@
   },
   "type": "module",
   "types": "index.d.ts",
-  "version": "1.0.1-dev.0",
+  "version": "1.0.1",
   "dependencies": {
     "typonomy": "^0.4.0"
   }
