@@ -1,6 +1,7 @@
 module.exports = {
   extends: [
     "plugin:@stylistic/recommended-extends",
+    "plugin:import/recommended",
   ],
   ignorePatterns: [
     "dist",
