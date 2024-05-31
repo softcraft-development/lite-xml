@@ -22,4 +22,12 @@ module.exports = {
     "no-console": "warn",
     "sort-keys": ["error", "asc", { caseSensitive: true, natural: false }],
   },
+  settings: {
+    "import/resolver": {
+      node: {
+        extensions: [".js", ".jsx", ".ts", ".tsx"],
+        moduleDirectory: ["node_modules", "src/"],
+      },
+    },
+  },
 }
