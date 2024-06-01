@@ -5,7 +5,6 @@
 /src
 /test
 esbuild.mjs
-jest.config.cjs
 RELEASE_NOTES*.md
 tsconfig*.json
 typedoc.json
