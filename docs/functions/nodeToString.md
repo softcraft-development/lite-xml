@@ -24,4 +24,4 @@ The XML string representation of the Node.
 
 ## Source
 
-[index.ts:158](https://github.com/softcraft-development/lite-xml/blob/522c05f5bd94b9a192823252fbfe630baa82757c/src/index.ts#L158)
+[index.ts:158](https://github.com/softcraft-development/lite-xml/blob/81307c9d4dca4226935ff16c3b4c98ed8b12225e/src/index.ts#L158)

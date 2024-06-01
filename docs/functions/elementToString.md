@@ -24,4 +24,4 @@ The string representation of the element.
 
 ## Source
 
-[index.ts:108](https://github.com/softcraft-development/lite-xml/blob/522c05f5bd94b9a192823252fbfe630baa82757c/src/index.ts#L108)
+[index.ts:108](https://github.com/softcraft-development/lite-xml/blob/81307c9d4dca4226935ff16c3b4c98ed8b12225e/src/index.ts#L108)
