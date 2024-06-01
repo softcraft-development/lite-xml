@@ -1,0 +1,12 @@
+.*
+/coverage
+/docs
+/scripts
+/src
+/test
+esbuild.mjs
+jest.config.cjs
+RELEASE_NOTES*.md
+tsconfig*.json
+typedoc.json
+vitest.config.mts

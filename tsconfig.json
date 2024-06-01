@@ -2,14 +2,9 @@
   "compilerOptions": {
     "baseUrl": "src",
     "esModuleInterop": true,
-    "lib": [
-      "es2015"
-    ],
-    "paths": {
-      "src/*": [
-        "./*"
-      ]
-    },
+    "module": "Preserve",
+    "moduleResolution": "bundler",
+    "noEmit": true,
     "strict": true
   },
   "exclude": [
@@ -19,5 +14,5 @@
   "include": [
     "src",
     "test"
-  ]
+  ],
 }

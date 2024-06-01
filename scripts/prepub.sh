@@ -14,6 +14,9 @@ if [[ $version == *"-dev"* ]]; then
   git add package.json && git commit -m "v$version"
 fi
 
+echo "** Files to be published:"
+npm publish --dry-run
+
 git push
 
 previousRelease=$(gh release list --json tagName --jq ".[].tagName" --limit 1)

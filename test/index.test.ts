@@ -1,5 +1,6 @@
 import { DOMParser } from "@xmldom/xmldom"
-import * as lib from "src/index"
+import { beforeAll, describe, expect, it } from "vitest"
+import * as lib from "../src/index"
 
 describe("append", () => {
   it("appends an element to the list of children", () => {
@@ -119,11 +120,22 @@ describe("nodeToString", () => {
 })
 
 describe("attributesToString", () => {
-  it("renders the attributes", () => {
-    const attributes = { attr1: "value1", attr2: "value2" }
-    const result = lib.attributesToString(attributes)
-    const expected = "attr1=\"value1\" attr2=\"value2\""
-    expect(result).toEqual(expected)
+  describe("when passed an attribute with a value", () => {
+    it("renders the attribute as a key=value pair", () => {
+      const attributes = { attr1: "value1" }
+      const result = lib.attributesToString(attributes)
+      const expected = "attr1=\"value1\""
+      expect(result).toEqual(expected)
+    })
+  })
+
+  describe("when passed an attribute with no value", () => {
+    it("renders the attribute as the key", () => {
+      const attributes = { attr1: undefined }
+      const result = lib.attributesToString(attributes)
+      const expected = "attr1"
+      expect(result).toEqual(expected)
+    })
   })
 })
 

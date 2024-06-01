@@ -43,7 +43,7 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "** Building"
-pnpm run build && pnpm declare
+pnpm run build
 if [ $? -ne 0 ]; then
   echo "Error during the build. Exiting..."
   exit 1
@@ -81,13 +81,8 @@ echo "** Archiving Release Notes"
 mv RELEASE_NOTES.md RELEASE_NOTES.v$version.md
 
 # Publish the package to npm
-pushd dist
-cp ../package.json .
-cp ../README.md .
-cp ../LICENSE .
 echo "** Publishing to NPM"
 npm publish --access public
-popd
 
 if [ $? -ne 0 ]; then
   echo "An error occurred publishing to NPM. Exiting..."

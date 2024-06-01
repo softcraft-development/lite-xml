@@ -1,7 +1,6 @@
 module.exports = {
   extends: [
     "plugin:@stylistic/recommended-extends",
-    "plugin:import/recommended",
   ],
   ignorePatterns: [
     "dist",
@@ -21,13 +20,5 @@ module.exports = {
     "func-style": ["error", "declaration", { allowArrowFunctions: true }],
     "no-console": "warn",
     "sort-keys": ["error", "asc", { caseSensitive: true, natural: false }],
-  },
-  settings: {
-    "import/resolver": {
-      node: {
-        extensions: [".js", ".jsx", ".ts", ".tsx"],
-        moduleDirectory: ["node_modules", "src/"],
-      },
-    },
   },
 }
