@@ -1,0 +1,7 @@
+{
+  "extends": "./tsconfig.declare.json",
+  "compilerOptions": {
+    "outDir": "./dist/browser",
+    "module": "es6",
+  },
+}

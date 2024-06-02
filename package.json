@@ -37,7 +37,7 @@
   "module": "dist/esm/index.js",
   "name": "lite-xml",
   "scripts": {
-    "build": "node esbuild.mjs && tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json",
+    "build": "node esbuild.mjs",
     "check": "tsc --noEmit",
     "docs": "typedoc && rm docs/README.md",
     "lint": "eslint src/**/*.ts test/**/*.test.ts",
