@@ -1,12 +1,5 @@
 {
-  "compilerOptions": {
-    "baseUrl": "src",
-    "esModuleInterop": true,
-    "module": "Preserve",
-    "moduleResolution": "bundler",
-    "noEmit": true,
-    "strict": true
-  },
+  "extends": "@tsconfig/recommended/tsconfig.json",
   "exclude": [
     "node_modules",
     "dist"

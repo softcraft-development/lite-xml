@@ -15,6 +15,9 @@ importers:
       '@stylistic/eslint-plugin':
         specifier: ^2.1.0
         version: 2.1.0(eslint@8.57.0)(typescript@5.4.5)
+      '@tsconfig/recommended':
+        specifier: ^1.0.6
+        version: 1.0.6
       '@types/node':
         specifier: ^20.13.0
         version: 20.13.0
@@ -565,6 +568,9 @@ packages:
 
   '@tsconfig/node16@1.0.4':
     resolution: {integrity: sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==}
+
+  '@tsconfig/recommended@1.0.6':
+    resolution: {integrity: sha512-0IKu9GHYF1NGTJiYgfWwqnOQSlnE9V9R7YohHNNf0/fj/SyOZWzdd06JFr0fLpg1Mqw0kGbYg8w5xdkSqLKM9g==}
 
   '@types/eslint@8.56.10':
     resolution: {integrity: sha512-Shavhk87gCtY2fhXDctcfS3e6FdxWkCx1iUZ9eEUbh7rTqlZT0/IzOkCOVt0fCjcFuZ9FPYfuezTBImfHCDBGQ==}
@@ -2232,6 +2238,8 @@ snapshots:
   '@tsconfig/node14@1.0.3': {}
 
   '@tsconfig/node16@1.0.4': {}
+
+  '@tsconfig/recommended@1.0.6': {}
 
   '@types/eslint@8.56.10':
     dependencies:

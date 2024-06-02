@@ -6,6 +6,7 @@
   "description": "A very lightweight XML construction library.",
   "devDependencies": {
     "@stylistic/eslint-plugin": "^2.1.0",
+    "@tsconfig/recommended": "^1.0.6",
     "@types/node": "^20.13.0",
     "@typescript-eslint/eslint-plugin": "^7.9.0",
     "@typescript-eslint/parser": "^7.9.0",
