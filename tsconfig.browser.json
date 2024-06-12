@@ -1,7 +1,8 @@
 {
-  "extends": "./tsconfig.declare.json",
   "compilerOptions": {
-    "outDir": "./dist/browser",
     "module": "es6",
+    "moduleResolution": "Bundler",
+    "outDir": "./dist/browser"
   },
+  "extends": "./tsconfig.declare.json"
 }

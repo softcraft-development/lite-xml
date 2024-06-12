@@ -1,6 +1,6 @@
 import { DOMParser } from "@xmldom/xmldom"
 import { beforeAll, describe, expect, it } from "vitest"
-import * as lib from "../src/index"
+import * as lib from "../src/index.js"
 
 describe("append", () => {
   it("appends an element to the list of children", () => {

@@ -9,12 +9,15 @@ importers:
   .:
     dependencies:
       typonomy:
-        specifier: ^0.6.1
-        version: 0.6.1
+        specifier: ^0.7.1
+        version: 0.7.1
     devDependencies:
       '@stylistic/eslint-plugin':
         specifier: ^2.1.0
         version: 2.1.0(eslint@8.57.0)(typescript@5.4.5)
+      '@tsconfig/node-lts':
+        specifier: ^20.1.3
+        version: 20.1.3
       '@tsconfig/recommended':
         specifier: ^1.0.6
         version: 1.0.6
@@ -556,6 +559,9 @@ packages:
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=8.40.0'
+
+  '@tsconfig/node-lts@20.1.3':
+    resolution: {integrity: sha512-m3b7EP2U+h5tNSpaBMfcTuHmHn04wrgRPQQrfKt75YIPq6kPs2153/KfPHdqkEWGx5pEBvS6rnvToT+yTtC1iw==}
 
   '@tsconfig/node10@1.0.11':
     resolution: {integrity: sha512-DcRjDCujK/kCk/cUe8Xz8ZSpm8mS3mNNpta+jGCA6USEDfktlNvm1+IuZ9eTcDbNk41BHwpHHeW+N1lKCz4zOw==}
@@ -1756,8 +1762,8 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  typonomy@0.6.1:
-    resolution: {integrity: sha512-2FGx8tvRamf9ZS9axxZ7g8VSbW9By4148WN8nWeGe5gThbLnhyEzhw8+Hs/hjCFbzUQKUBsjVGU2o8KJ6aSKeg==}
+  typonomy@0.7.1:
+    resolution: {integrity: sha512-gOE8//CxzKTIJ4NYEf35WApS3LwCs7GlE4x7U68P6ju6i6OaAoFZcoEs4jnKeNzvufuATlRlyu/Lqav9oxiFqA==}
 
   ufo@1.5.3:
     resolution: {integrity: sha512-Y7HYmWaFwPUmkoQCUIAYpKqkOf+SbVj/2fJJZ4RJMCfZp0rTGwRbzQD+HghfnhKOjL9E01okqz+ncJskGYfBNw==}
@@ -2230,6 +2236,8 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
       - typescript
+
+  '@tsconfig/node-lts@20.1.3': {}
 
   '@tsconfig/node10@1.0.11': {}
 
@@ -3651,7 +3659,7 @@ snapshots:
 
   typescript@5.4.5: {}
 
-  typonomy@0.6.1: {}
+  typonomy@0.7.1: {}
 
   ufo@1.5.3: {}
 

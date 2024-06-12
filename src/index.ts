@@ -51,7 +51,7 @@ export function append(children: Children, element: Element): Children {
  * @returns The string representation of the attributes.
  */
 export function attributesToString(attributes: Attributes): string {
-  return ty.reduce(attributes, (array, value, key) => {
+  return ty.reduce(attributes, (array: string[], value: ty.Possible<string>, key: string) => {
     if (ty.isDefinite(value)) {
       array.push(`${key}="${value.replace("\"", "&quot;")}"`)
     }
@@ -59,7 +59,7 @@ export function attributesToString(attributes: Attributes): string {
       array.push(key)
     }
     return array
-  }, ty.arr<string>()).join(" ")
+  }, []).join(" ")
 }
 
 /**
