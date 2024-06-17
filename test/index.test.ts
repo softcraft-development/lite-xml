@@ -78,6 +78,28 @@ describe("element", () => {
   })
 })
 
+describe("isAttributes", () => {
+  it("returns true for a string map", () => {
+    expect(lib.isAttributes({ isExplicit: "value", isNull: null, isUndefined: undefined })).toBe(true)
+  })
+
+  it("returns false for null", () => {
+    expect(lib.isAttributes(null)).toBe(false)
+  })
+
+  it("returns false for undefined", () => {
+    expect(lib.isAttributes(undefined)).toBe(false)
+  })
+
+  it("returns true an empty object", () => {
+    expect(lib.isAttributes({})).toBe(true)
+  })
+
+  it("returns false for a string", () => {
+    expect(lib.isAttributes("attribute")).toBe(false)
+  })
+})
+
 describe("isElement", () => {
   it("is true if the object an element", () => {
     const obj = lib.element("test ")
