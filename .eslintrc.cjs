@@ -9,6 +9,7 @@ module.exports = {
   parser: "@typescript-eslint/parser",
   plugins: [
     "@stylistic",
+    "@typescript-eslint",
   ],
   root: true,
   rules: {
@@ -16,6 +17,8 @@ module.exports = {
     "@stylistic/no-multiple-empty-lines": ["error", { max: 1 }],
     "@stylistic/quote-props": ["error", "as-needed"],
     "@stylistic/quotes": ["error", "double"],
+    "@typescript-eslint/consistent-type-assertions": ["error", { assertionStyle: "never" }],
+    "@typescript-eslint/no-explicit-any": "error",
     "func-names": ["error", "always"],
     "func-style": ["error", "declaration", { allowArrowFunctions: true }],
     "no-console": "warn",
