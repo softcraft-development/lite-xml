@@ -16,7 +16,7 @@ Represents an XML element.
 
 #### Source
 
-[index.ts:20](https://github.com/softcraft-development/lite-xml/blob/49f3c16147244518d1d768b0451f699d96f841ba/src/index.ts#L20)
+[src/index.ts:20](https://github.com/softcraft-development/lite-xml/blob/be242627cf8417fe0a6285d9827d78d365de7d02/src/index.ts#L20)
 
 ***
 
@@ -26,7 +26,7 @@ Represents an XML element.
 
 #### Source
 
-[index.ts:21](https://github.com/softcraft-development/lite-xml/blob/49f3c16147244518d1d768b0451f699d96f841ba/src/index.ts#L21)
+[src/index.ts:21](https://github.com/softcraft-development/lite-xml/blob/be242627cf8417fe0a6285d9827d78d365de7d02/src/index.ts#L21)
 
 ***
 
@@ -36,4 +36,4 @@ Represents an XML element.
 
 #### Source
 
-[index.ts:22](https://github.com/softcraft-development/lite-xml/blob/49f3c16147244518d1d768b0451f699d96f841ba/src/index.ts#L22)
+[src/index.ts:22](https://github.com/softcraft-development/lite-xml/blob/be242627cf8417fe0a6285d9827d78d365de7d02/src/index.ts#L22)

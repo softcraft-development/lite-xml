@@ -14,7 +14,7 @@
 
 #### Source
 
-[index.ts:9](https://github.com/softcraft-development/lite-xml/blob/49f3c16147244518d1d768b0451f699d96f841ba/src/index.ts#L9)
+[src/index.ts:9](https://github.com/softcraft-development/lite-xml/blob/be242627cf8417fe0a6285d9827d78d365de7d02/src/index.ts#L9)
 
 ***
 
@@ -24,7 +24,7 @@
 
 #### Source
 
-[index.ts:10](https://github.com/softcraft-development/lite-xml/blob/49f3c16147244518d1d768b0451f699d96f841ba/src/index.ts#L10)
+[src/index.ts:10](https://github.com/softcraft-development/lite-xml/blob/be242627cf8417fe0a6285d9827d78d365de7d02/src/index.ts#L10)
 
 ***
 
@@ -34,7 +34,7 @@
 
 #### Source
 
-[index.ts:11](https://github.com/softcraft-development/lite-xml/blob/49f3c16147244518d1d768b0451f699d96f841ba/src/index.ts#L11)
+[src/index.ts:11](https://github.com/softcraft-development/lite-xml/blob/be242627cf8417fe0a6285d9827d78d365de7d02/src/index.ts#L11)
 
 ***
 
@@ -44,7 +44,7 @@
 
 #### Source
 
-[index.ts:12](https://github.com/softcraft-development/lite-xml/blob/49f3c16147244518d1d768b0451f699d96f841ba/src/index.ts#L12)
+[src/index.ts:12](https://github.com/softcraft-development/lite-xml/blob/be242627cf8417fe0a6285d9827d78d365de7d02/src/index.ts#L12)
 
 ***
 
@@ -54,4 +54,4 @@
 
 #### Source
 
-[index.ts:13](https://github.com/softcraft-development/lite-xml/blob/49f3c16147244518d1d768b0451f699d96f841ba/src/index.ts#L13)
+[src/index.ts:13](https://github.com/softcraft-development/lite-xml/blob/be242627cf8417fe0a6285d9827d78d365de7d02/src/index.ts#L13)

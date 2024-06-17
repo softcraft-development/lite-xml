@@ -13,4 +13,4 @@ Typically contained by an Element.
 
 ## Source
 
-[index.ts:34](https://github.com/softcraft-development/lite-xml/blob/49f3c16147244518d1d768b0451f699d96f841ba/src/index.ts#L34)
+[src/index.ts:34](https://github.com/softcraft-development/lite-xml/blob/be242627cf8417fe0a6285d9827d78d365de7d02/src/index.ts#L34)

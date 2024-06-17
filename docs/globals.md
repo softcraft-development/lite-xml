@@ -22,6 +22,7 @@
 - [docToString](functions/docToString.md)
 - [element](functions/element.md)
 - [elementToString](functions/elementToString.md)
+- [isAttributes](functions/isAttributes.md)
 - [isElement](functions/isElement.md)
 - [isNode](functions/isNode.md)
 - [nodeToString](functions/nodeToString.md)
