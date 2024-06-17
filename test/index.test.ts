@@ -62,8 +62,12 @@ describe("element", () => {
     it("contains that child", () => {
       const result = lib.element("test", lib.element("child"))
       const first = result.children?.[0]
-      expect(lib.isElement(first)).toBe(true)
-      expect((first as lib.Element)?.name).toEqual("child")
+      if (lib.isElement(first)) {
+        expect(first.name).toEqual("child")
+      }
+      else {
+        expect.fail("Expected first child to be an element")
+      }
     })
   })
 

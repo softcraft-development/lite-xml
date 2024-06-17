@@ -52,7 +52,7 @@ export function append(children: Children, element: Element): Children {
  */
 export function attributesToString(attributes: Attributes): string {
   return ty.reduce(attributes, (array: string[], value: ty.Possible<string>, key: string) => {
-    if (ty.isDefinite(value)) {
+    if (ty.isExplicit(value)) {
       array.push(`${key}="${value.replace("\"", "&quot;")}"`)
     }
     else {
@@ -130,9 +130,21 @@ export function elementToString(element: Element): string {
  * @param obj - The object to check.
  * @returns True if the object is a valid Element; false otherwise.
  */
-export function isElement(obj?: unknown): obj is Element {
-  return (!!obj) && (typeof (obj as Element).name === "string")
+export function isAttributes(value: unknown): value is Attributes {
+  return ty.isRecordOf<ty.Possible<string>>(value, ty.widen(ty.isString, ty.isNullish))
 }
+
+/**
+ * Checks if the given object is a valid Element.
+ *
+ * @param obj - The object to check.
+ * @returns True if the object is a valid Element; false otherwise.
+ */
+export const isElement = ty.typeGuardFor<Element>({
+  attributes: ty.widen<Attributes, undefined>(isAttributes, ty.isUndefined),
+  children: ty.widen<Children, undefined>(ty.arrayGuard<Node>(isNode), ty.isUndefined),
+  name: ty.isString,
+})
 
 /**
  * Checks if the given object is a Node.
