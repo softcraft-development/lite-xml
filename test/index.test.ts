@@ -1,5 +1,5 @@
 import { DOMParser } from "@xmldom/xmldom"
-import { beforeAll, describe, expect, it } from "vitest"
+import { beforeEach, describe, expect, it } from "vitest"
 import * as lib from "../src/index.js"
 
 describe("append", () => {
@@ -12,28 +12,86 @@ describe("append", () => {
 })
 
 describe("docToString", () => {
-  let document: lib.Doc
-  let result: string
-  let parsed: Document
+  let document: () => lib.Doc
+  let result: () => string
+  let parsed: () => Document
 
-  beforeAll(() => {
-    document = {
-      encoding: "UTF-8",
+  beforeEach(() => {
+    document = () => ({
       root: {
         name: "root",
       },
-      version: "1.0",
-    }
-    result = lib.docToString(document)
-    parsed = new DOMParser().parseFromString(result)
+    })
+    result = () => lib.docToString(document())
+    parsed = () => new DOMParser().parseFromString(result())
+  })
+
+  describe("with a DTD", () => {
+    beforeEach(() => {
+      document = () => ({
+        dtd: "external",
+        root: {
+          name: "root",
+        },
+      })
+    })
+
+    it("renders the DTD", () => {
+      expect(parsed().doctype?.publicId).toContain("external")
+    })
+  })
+
+  describe("with an encoding", () => {
+    beforeEach(() => {
+      document = () => ({
+        encoding: "UTF-16",
+        root: {
+          name: "root",
+        },
+      })
+    })
+
+    it("sets the encoding on the XML declaration", () => {
+      expect(result()).toMatch(/<\?xml .*encoding=\"UTF-16\".*?>/)
+    })
+  })
+
+  describe("with a an internal DTD", () => {
+    beforeEach(() => {
+      document = () => ({
+        internalDTD: "internal",
+        root: {
+          name: "root",
+        },
+      })
+    })
+
+    it("sets the internal DTD", () => {
+      expect(parsed().doctype?.publicId).toContain("internal")
+    })
+  })
+
+  describe("with a version", () => {
+    beforeEach(() => {
+      document = () => ({
+        root: {
+          name: "root",
+        },
+        version: "1.1",
+      })
+    })
+
+    it("sets the encoding on the XML declaration", () => {
+      expect(result()).toMatch(/<\?xml .*version=\"1.1\".*?>/)
+    })
   })
 
   it("renders a valid XML document", () => {
-    expect(parsed).toBeTruthy()
+    expect(parsed()).toBeTruthy()
   })
 
   it("has the root element", () => {
-    expect(parsed.documentElement.nodeName).toEqual("root")
+    expect(parsed().documentElement.nodeName).toEqual("root")
   })
 })
 
