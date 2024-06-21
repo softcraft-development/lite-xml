@@ -82,6 +82,10 @@ describe("docToString", () => {
     expect(parsed()).toBeTruthy()
   })
 
+  it("has no doctype", () => {
+    expect(result()).not.toContain("<!DOCTYPE")
+  })
+
   it("has the root element", () => {
     expect(parsed().documentElement.nodeName).toEqual("root")
   })

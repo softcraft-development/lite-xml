@@ -51,11 +51,17 @@ export function attributesToString(attributes: Attributes): string {
  * @returns The XML string representation of the Doc.
  */
 export function docToString(doc: Doc): string {
-  const str = `<?xml version="${doc.version || "1.0"}" encoding="${doc.encoding || "UTF-8"}" standalone="no"?>
-<!DOCTYPE ${doc.root.name} PUBLIC
+  const version = doc.version || "1.0"
+  const encoding = doc.encoding || "UTF-8"
+  const xmlDeclaration = `<?xml version="${version}" encoding="${encoding}" standalone="no"?>`
+  const docType = doc.internalDTD || doc.dtd
+    ? `<!DOCTYPE ${doc.root.name} PUBLIC
   ${doc.internalDTD ? `"${doc.internalDTD}"` : ""}
-  ${doc.dtd ? `"${doc.dtd}"` : ""}>
-${nodeToString(doc.root)}`
+  ${doc.dtd ? `"${doc.dtd}"` : ""}>`
+    : ""
+  const content = nodeToString(doc.root)
+
+  const str = `${xmlDeclaration}${docType}${content}`
   return str
 }
 
