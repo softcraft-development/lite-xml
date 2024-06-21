@@ -1,7 +1,7 @@
 {
   "author": "Craig Walker",
   "dependencies": {
-    "typonomy": "^0.9.1"
+    "typonomy": "^0.13.0"
   },
   "description": "A very lightweight XML construction library.",
   "devDependencies": {
