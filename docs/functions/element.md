@@ -32,4 +32,4 @@ An XML element.
 
 ## Source
 
-[src/index.ts:70](https://github.com/softcraft-development/lite-xml/blob/d262b9b03753b4fdcb9ba812d868ebe793bf612f/src/index.ts#L70)
+[src/index.ts:76](https://github.com/softcraft-development/lite-xml/blob/e544007b3c29688aef3618108e8962fe5df46e13/src/index.ts#L76)
