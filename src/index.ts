@@ -18,7 +18,7 @@ export interface Doc {
  */
 export interface Element {
   attributes?: Attributes
-  children?: Children
+  children?: ty.Some<Node>
   name: string
 }
 
@@ -26,23 +26,6 @@ export interface Element {
  * An XML Node, which may be either an Element or a string.
  */
 export type Node = Element | string
-
-/**
- * An array of Nodes.
- * Typically contained by an Element.
- */
-export type Children = Node[]
-
-/**
- * Appends an Element to a list of Children.
- *
- * @param children - The list of children to append to.
- * @param element - The element to append.
- * @returns The updated list of children.
- */
-export function append(children: Children, element: Element): Children {
-  return ty.append(children, element)
-}
 
 /**
  * Renders a collection of Attributes as a string.
@@ -84,17 +67,10 @@ ${nodeToString(doc.root)}`
  * @param attributes - The attributes of the element, if any.
  * @returns An XML element.
  */
-export function element(name: string, children?: Node | Children, attributes?: Attributes): Element {
-  let wrapped: ty.Optional<Children>
-  if (children) {
-    wrapped = ty.wrap(children)
-  }
-  else {
-    wrapped = undefined
-  }
+export function element(name: string, children?: ty.Some<Node>, attributes?: Attributes): Element {
   return {
     attributes,
-    children: wrapped,
+    children,
     name,
   }
 }
@@ -112,7 +88,7 @@ export function elementToString(element: Element): string {
   }
   if (element.children) {
     str = `${str}>`
-    str = element.children.reduce<string>((s, child) => {
+    str = ty.reduceSome(element.children, (s, child) => {
       s = `${s}${nodeToString(child)}`
       return s
     }, str)
@@ -142,7 +118,7 @@ export function isAttributes(value: unknown): value is Attributes {
  */
 export const isElement = ty.typeGuardFor<Element>({
   attributes: ty.widen<Attributes, undefined>(isAttributes, ty.isUndefined),
-  children: ty.widen<Children, undefined>(ty.arrayGuard<Node>(isNode), ty.isUndefined),
+  children: ty.widen<ty.Some<Node>, undefined>(ty.typeGuardSome<Node>(isNode), ty.isUndefined),
   name: ty.isString,
 })
 

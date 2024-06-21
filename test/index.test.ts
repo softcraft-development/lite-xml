@@ -1,15 +1,7 @@
 import { DOMParser } from "@xmldom/xmldom"
+import { isPlural } from "typonomy"
 import { beforeEach, describe, expect, it } from "vitest"
 import * as lib from "../src/index.js"
-
-describe("append", () => {
-  it("appends an element to the list of children", () => {
-    const children = [{ name: "child1" }, { name: "child2" }]
-    const element = { name: "child3" }
-    const result = lib.append(children, element)
-    expect(result).toEqual([{ name: "child1" }, { name: "child2" }, { name: "child3" }])
-  })
-})
 
 describe("docToString", () => {
   let document: () => lib.Doc
@@ -112,20 +104,20 @@ describe("element", () => {
 
   describe("when passed a single string child", () => {
     it("contains that string", () => {
-      expect(lib.element("test", "child").children).toEqual(["child"])
+      expect(lib.element("test", "text").children).toEqual("text")
     })
   })
 
   describe("when passed a single element child", () => {
     it("contains that child", () => {
       const result = lib.element("test", lib.element("child"))
-      const first = result.children?.[0]
-      if (lib.isElement(first)) {
-        expect(first.name).toEqual("child")
+      if (isPlural(result.children)) {
+        expect.fail("Expected a single child")
       }
-      else {
-        expect.fail("Expected first child to be an element")
+      if (!lib.isElement(result.children)) {
+        expect.fail("Expected child to be an element")
       }
+      expect(result.children.name).toEqual("child")
     })
   })
 
