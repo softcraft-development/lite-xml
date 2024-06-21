@@ -12,12 +12,10 @@
 ## Type Aliases
 
 - [Attributes](type-aliases/Attributes.md)
-- [Children](type-aliases/Children.md)
 - [Node](type-aliases/Node.md)
 
 ## Functions
 
-- [append](functions/append.md)
 - [attributesToString](functions/attributesToString.md)
 - [docToString](functions/docToString.md)
 - [element](functions/element.md)

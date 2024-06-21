@@ -16,17 +16,17 @@ Represents an XML element.
 
 #### Source
 
-[src/index.ts:20](https://github.com/softcraft-development/lite-xml/blob/90c81a440315c85619608e51fca7935d56461c89/src/index.ts#L20)
+[src/index.ts:20](https://github.com/softcraft-development/lite-xml/blob/d262b9b03753b4fdcb9ba812d868ebe793bf612f/src/index.ts#L20)
 
 ***
 
 ### children?
 
-> `optional` **children**: [`Children`](../type-aliases/Children.md)
+> `optional` **children**: `Some`\<[`Node`](../type-aliases/Node.md)\>
 
 #### Source
 
-[src/index.ts:21](https://github.com/softcraft-development/lite-xml/blob/90c81a440315c85619608e51fca7935d56461c89/src/index.ts#L21)
+[src/index.ts:21](https://github.com/softcraft-development/lite-xml/blob/d262b9b03753b4fdcb9ba812d868ebe793bf612f/src/index.ts#L21)
 
 ***
 
@@ -36,4 +36,4 @@ Represents an XML element.
 
 #### Source
 
-[src/index.ts:22](https://github.com/softcraft-development/lite-xml/blob/90c81a440315c85619608e51fca7935d56461c89/src/index.ts#L22)
+[src/index.ts:22](https://github.com/softcraft-development/lite-xml/blob/d262b9b03753b4fdcb9ba812d868ebe793bf612f/src/index.ts#L22)
