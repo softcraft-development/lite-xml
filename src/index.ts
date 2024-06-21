@@ -109,7 +109,7 @@ export function elementToString(element: Element): string {
 /**
  * Checks if the given object is a valid Element.
  *
- * @param obj - The object to check.
+ * @param value - The object to check.
  * @returns True if the object is a valid Element; false otherwise.
  */
 export function isAttributes(value: unknown): value is Attributes {
@@ -117,9 +117,9 @@ export function isAttributes(value: unknown): value is Attributes {
 }
 
 /**
- * Checks if the given object is a valid Element.
+ * Checks if the given value is a valid Element.
  *
- * @param obj - The object to check.
+ * @param value - The value to check.
  * @returns True if the object is a valid Element; false otherwise.
  */
 export const isElement = ty.typeGuardFor<Element>({
@@ -130,14 +130,14 @@ export const isElement = ty.typeGuardFor<Element>({
 
 /**
  * Checks if the given object is a Node.
- * @param obj - The object to check.
+ * @param value - The object to check.
  * @returns True if the object is an Element or a String; false otherwise.
  */
-export function isNode(obj: unknown): obj is Node {
-  if (ty.isString(obj)) {
+export function isNode(value: unknown): value is Node {
+  if (ty.isString(value)) {
     return true
   }
-  if (isElement(obj)) {
+  if (isElement(value)) {
     return true
   }
   return false
