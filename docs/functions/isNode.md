@@ -6,22 +6,22 @@
 
 # Function: isNode()
 
-> **isNode**(`obj`): `obj is Node`
+> **isNode**(`value`): `value is Node`
 
 Checks if the given object is a Node.
 
 ## Parameters
 
-• **obj**: `unknown`
+• **value**: `unknown`
 
 The object to check.
 
 ## Returns
 
-`obj is Node`
+`value is Node`
 
 True if the object is an Element or a String; false otherwise.
 
 ## Source
 
-[src/index.ts:136](https://github.com/softcraft-development/lite-xml/blob/e544007b3c29688aef3618108e8962fe5df46e13/src/index.ts#L136)
+[src/index.ts:136](https://github.com/softcraft-development/lite-xml/blob/8f8886c100c793279a5681ca4e5b0947f8c0715c/src/index.ts#L136)

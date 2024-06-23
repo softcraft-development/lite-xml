@@ -8,11 +8,13 @@
 
 > **isElement**(`value`): `value is Element`
 
-Checks if the given object is a valid Element.
+Checks if the given value is a valid Element.
 
 ## Parameters
 
 • **value**: `unknown`
+
+The value to check.
 
 ## Returns
 
@@ -22,4 +24,4 @@ True if the object is a valid Element; false otherwise.
 
 ## Source
 
-[src/index.ts:125](https://github.com/softcraft-development/lite-xml/blob/e544007b3c29688aef3618108e8962fe5df46e13/src/index.ts#L125)
+[src/index.ts:125](https://github.com/softcraft-development/lite-xml/blob/8f8886c100c793279a5681ca4e5b0947f8c0715c/src/index.ts#L125)
