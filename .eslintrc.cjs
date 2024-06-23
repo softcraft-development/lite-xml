@@ -22,6 +22,7 @@ module.exports = {
     "func-names": ["error", "always"],
     "func-style": ["error", "declaration", { allowArrowFunctions: true }],
     "no-console": "warn",
+    "no-param-reassign": "error",
     "sort-keys": ["error", "asc", { caseSensitive: true, natural: false }],
   },
 }
