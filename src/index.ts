@@ -34,7 +34,7 @@ export type Node = Element | string
  * @returns The string representation of the attributes.
  */
 export function attributesToString(attributes: Attributes): string {
-  return ty.reduce(attributes, (array: string[], value: ty.Possible<string>, key: string) => {
+  return ty.reduceObject(attributes, (array: string[], value: ty.Possible<string>, key: string) => {
     if (ty.isExplicit(value)) {
       array.push(`${key}="${value.replace("\"", "&quot;")}"`)
     }
@@ -94,9 +94,8 @@ export function elementToString(element: Element): string {
   }
   if (element.children) {
     str = `${str}>`
-    str = ty.reduceSome(element.children, (s, child) => {
-      s = `${s}${nodeToString(child)}`
-      return s
+    str = ty.reduceSome(element.children, (state, child) => {
+      return child ? `${state}${nodeToString(child)}` : state
     }, str)
     str = `${str}</${element.name}>`
   }
@@ -112,9 +111,10 @@ export function elementToString(element: Element): string {
  * @param value - The object to check.
  * @returns True if the object is a valid Element; false otherwise.
  */
-export function isAttributes(value: unknown): value is Attributes {
-  return ty.isRecordOf<ty.Possible<string>>(value, ty.widen(ty.isString, ty.isNullish))
-}
+export const isAttributes = ty.typeGuardRecord<string, ty.Possible<string>>(
+  ty.isString,
+  ty.widen(ty.isString, ty.isNullish)
+)
 
 /**
  * Checks if the given value is a valid Element.
