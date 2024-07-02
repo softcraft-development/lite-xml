@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       typonomy:
-        specifier: ^0.24.0
-        version: 0.24.0
+        specifier: ^0.25.0
+        version: 0.25.0
     devDependencies:
       '@stylistic/eslint-plugin':
         specifier: ^2.1.0
@@ -1762,8 +1762,8 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  typonomy@0.24.0:
-    resolution: {integrity: sha512-rlThbu9X1svXyVig9skYQmUgNm+xKDhgd5za44iuyuXpZ1gne9oinRgetaZblXZotch67FFLmWXmCaTWAPf8Ew==}
+  typonomy@0.25.0:
+    resolution: {integrity: sha512-T1DTo5nz/WK+eGKV8etjhDZipRCUU1eB11u7aQ1nNMY/K1YOkVJvCIdvETSVLsco3jiKKnUg0m6e8TfqenaITQ==}
 
   ufo@1.5.3:
     resolution: {integrity: sha512-Y7HYmWaFwPUmkoQCUIAYpKqkOf+SbVj/2fJJZ4RJMCfZp0rTGwRbzQD+HghfnhKOjL9E01okqz+ncJskGYfBNw==}
@@ -3659,7 +3659,7 @@ snapshots:
 
   typescript@5.4.5: {}
 
-  typonomy@0.24.0: {}
+  typonomy@0.25.0: {}
 
   ufo@1.5.3: {}
 

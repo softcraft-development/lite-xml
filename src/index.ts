@@ -18,7 +18,7 @@ export interface Doc {
  */
 export interface Element {
   attributes?: Attributes
-  children?: ty.Some<Node>
+  children?: ty.Bag<Node>
   name: string
 }
 
@@ -73,7 +73,7 @@ export function docToString(doc: Doc): string {
  * @param attributes - The attributes of the element, if any.
  * @returns An XML element.
  */
-export function element(name: string, children?: ty.Some<Node>, attributes?: Attributes): Element {
+export function element(name: string, children?: ty.Bag<Node>, attributes?: Attributes): Element {
   return {
     attributes,
     children,
@@ -124,7 +124,7 @@ export const isAttributes = ty.typeGuardRecord<string, ty.Possible<string>>(
  */
 export const isElement = ty.typeGuardFor<Element>({
   attributes: ty.widen<Attributes, undefined>(isAttributes, ty.isUndefined),
-  children: ty.widen<ty.Some<Node>, undefined>(ty.typeGuardSome<Node>(isNode), ty.isUndefined),
+  children: ty.typeGuard(ty.partialRight(ty.isBag<Node>, isNode)),
   name: ty.isString,
 })
 
