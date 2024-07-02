@@ -12,4 +12,4 @@ An XML Node, which may be either an Element or a string.
 
 ## Source
 
-[src/index.ts:28](https://github.com/softcraft-development/lite-xml/blob/8f8886c100c793279a5681ca4e5b0947f8c0715c/src/index.ts#L28)
+[src/index.ts:28](https://github.com/softcraft-development/lite-xml/blob/7f70177857958c974aa744b453180d0f3220277b/src/index.ts#L28)

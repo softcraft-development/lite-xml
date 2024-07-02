@@ -24,4 +24,4 @@ True if the object is an Element or a String; false otherwise.
 
 ## Source
 
-[src/index.ts:136](https://github.com/softcraft-development/lite-xml/blob/8f8886c100c793279a5681ca4e5b0947f8c0715c/src/index.ts#L136)
+[src/index.ts:136](https://github.com/softcraft-development/lite-xml/blob/7f70177857958c974aa744b453180d0f3220277b/src/index.ts#L136)

@@ -16,7 +16,7 @@ Creates an XML element.
 
 The name of the element.
 
-• **children?**: `Some`\<[`Node`](../type-aliases/Node.md)\>
+• **children?**: `Bag`\<[`Node`](../type-aliases/Node.md)\>
 
 The (optional) contents of the element, either nodes or strings.
 
@@ -32,4 +32,4 @@ An XML element.
 
 ## Source
 
-[src/index.ts:76](https://github.com/softcraft-development/lite-xml/blob/8f8886c100c793279a5681ca4e5b0947f8c0715c/src/index.ts#L76)
+[src/index.ts:76](https://github.com/softcraft-development/lite-xml/blob/7f70177857958c974aa744b453180d0f3220277b/src/index.ts#L76)
